@@ -4,7 +4,7 @@
     .row
       .col-xs-12
         %a.navbar-brand{:href => "/"}
-          %img.logo.img-responsive{:alt => "Red Cup logo", :src => "/images/Red-Cup-Logo.gif"}
+          %img.logo.img-responsive{:alt => "Cape Herald Logo", :src => "/images/"}
         %nav.navbar.navbar-default
           .navbar-header
             %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
@@ -15,10 +15,14 @@
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             %ul.nav.navbar-nav.pull-left
               %li.navbar-left.hvr-underline-from-center.active
-                %a.scroll{:href => "/#banner"} HOME
+                %a.scroll{:href => "/#banner"} Home
+              %li.hvr-underline-from-center
+                %a.scroll{:href => "/news"} Local
+              %li.hvr-underline-from-center
+                %a.scroll{:href => "/news"} International
               %li.hvr-underline-from-center.dropdown
                 %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                  ABOUT US
+                  Local
                   %span.caret
                 %ul.dropdown-menu
                   %li
@@ -28,13 +32,9 @@
                   %li
                     %a{:href => "/team"} Team
               %li.hvr-underline-from-center
-                %a.scroll{:href => "/gallery"} GALLERY
+                %a.scroll{:href => "/lifestyle"} Enteetainment
               %li.hvr-underline-from-center
-                %a.scroll{:href => "/music"} MUSIC
-              %li.hvr-underline-from-center
-                %a.scroll{:href => "/videos"} VIDEOS
-              %li.hvr-underline-from-center
-                %a.scroll{:href => "/lifestyle"} LIFESTYLE
+                %a.scroll{:href => "/news"} Opinion
               %li.hvr-underline-from-center
                 %a.scroll{:href => "/news"} NEWS
               %li.hvr-underline-from-center
