@@ -1,7 +1,7 @@
 %link{:href => "/css/thumbnail-slider.css", :rel => "stylesheet"}/
 
 .container
-  .row.club-profiles
+  .row.club-profiles.col-md-9
     / start banner
     #slider.flexslider
       %ul.slides      
@@ -13,14 +13,6 @@
               %br
               %p.flex-link
                 %a{:href => "#"} More here
-    #carousel.flexslider
-      %ul.slides      
-        - for banner in @banners
-          %li
-            %img{:alt => "#{banner.name}", :src => "#{banner.image_url}"}
-              / .caption #{banner.name}
-              / .caption.link
-              /  %a{:href => "#"} More here
     / end banner
 
   .row.module.parallax.parallax-profiles

@@ -17,23 +17,25 @@
             .tabs.tabs-style-linebox.wow.fadeInUp{"data-wow-duration" => "2s"}
               %nav.pull-right
                 %ul.content_filter
-                  %li.hvr-sweep-to-top.active.filter{"data-filter" => ".fashion", :id => "#fashion"}
-                    %span Fashion
-                  %li.hvr-sweep-to-top.filter{"data-filter" => ".gadgets"}
-                    %span Healthy Living
-                  %li.hvr-sweep-to-top.filter{"data-filter" => ".healthyLiving"}
-                    %span Street Hustle
-                  %li.hvr-sweep-to-top.filter{"data-filter" => ".gadgets"}
-                    %span Gadgets
+                  %li.hvr-sweep-to-top.active.filter{"data-filter" => "", :id => "#all"}
+                    %span All
+                  %li.hvr-sweep-to-top.filter{"data-filter" => ".soccer"}
+                    %span Soccer
+                  %li.hvr-sweep-to-top.filter{"data-filter" => ".rugby"}
+                    %span Rugby
+                  %li.hvr-sweep-to-top.filter{"data-filter" => ".cricket"}
+                    %span Cricket
+                  %li.hvr-sweep-to-top.filter{"data-filter" => ".other"}
+                    %span Other
 
           .col-sm-12#gallery-content
             .grid
               - for article in @lifestyle
-                - if(article.category == "healthyLiving")
-                  .grid-item.grid-sizer.col-sm-12.servicebox.healthyLiving
-                    .servicebox-image.col-sm-4
+                - if(article.category == "soccer")
+                  .grid-item.grid-sizer.col-sm-4.servicebox.soccer
+                    .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
-                    .servicebox-inner.col-sm-8
+                    .servicebox-inner
                       %p
                         #{article.title}
                         %br/
@@ -42,11 +44,11 @@
                         %br/
                         %a{:href => "#{article.link}"} #{article.intro}
 
-                - if(article.category == "fashion")
-                  .grid-item.grid-sizer.col-sm-12.servicebox.fashion
-                    .servicebox-image.col-sm-4
+                - if(article.category == "rugby")
+                  .grid-item.grid-sizer.col-sm-4.servicebox.rugby
+                    .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
-                    .servicebox-inner.col-sm-8
+                    .servicebox-inner
                       %p
                         #{article.title}
                         %br/
@@ -55,11 +57,11 @@
                         %br/
                         %a{:href => "#{article.link}"} #{article.intro}
 
-                - if(article.category == "streetHustle")
-                  .grid-item.grid-sizer.col-sm-12.servicebox.streetHustle
-                    .servicebox-image.col-sm-4
+                - if(article.category == "other")
+                  .grid-item.grid-sizer.col-sm-4.servicebox.other
+                    .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
-                    .servicebox-inner.col-sm-8
+                    .servicebox-inner
                       %p
                         #{article.title}
                         %br/
@@ -69,11 +71,11 @@
                         %br/
                         %a{:href => "#{article.link}"} #{article.intro}
 
-                - if(article.category == "gadgets")
-                  .grid-item.grid-sizer.col-sm-12.servicebox.gadgets
-                    .servicebox-image.col-sm-4
+                - if(article.category == "cricket")
+                  .grid-item.grid-sizer.col-sm-4.servicebox.cricket
+                    .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
-                    .servicebox-inner.col-sm-8
+                    .servicebox-inner
                       %p
                         #{article.title}
                         %br/
@@ -94,7 +96,6 @@
 
 :javascript
   $(document).ready(function(){
-    document.getElementById('#fashion').classList.add("active");
     $('.grid').masonry({
       // options...
       itemSelector: '.grid-item',
