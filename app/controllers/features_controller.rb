@@ -30,7 +30,7 @@ class FeaturesController < ApplicationController
   
   private
   def feature_params
-    params.require(:feature).permit(:link,:image,:intro,:heading)
+    params.require(:feature).permit(:link,:image,:intro,:heading,:body)
   end
 
 end

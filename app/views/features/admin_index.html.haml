@@ -10,6 +10,7 @@
         - for feature in @features
           .col-md-4{:style => "height:250px"}
             %h4 #{feature.heading}
+            %p #{feature.link}
             = image_tag feature.image_url(:thumb) if feature.image?
             %p #{feature.intro}
-            %p #{feature.link}
+            

@@ -33,12 +33,13 @@
               - for article in @lifestyle
                 - if(article.category == "soccer")
                   .grid-item.grid-sizer.col-sm-4.servicebox.soccer
+                    %h2
+                      #{article.title}
+
                     .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
                     .servicebox-inner
                       %p
-                        #{article.title}
-                        %br/
                         %i.fa.fa-fw.fa-calendar 
                         #{article.created_at.strftime("%d %b %Y")}
                         %br/
@@ -46,12 +47,12 @@
 
                 - if(article.category == "rugby")
                   .grid-item.grid-sizer.col-sm-4.servicebox.rugby
+                    %h2
+                      #{article.title}
                     .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
                     .servicebox-inner
                       %p
-                        #{article.title}
-                        %br/
                         %i.fa.fa-fw.fa-calendar 
                         #{article.created_at.strftime("%d %b %Y")}
                         %br/
@@ -59,12 +60,12 @@
 
                 - if(article.category == "other")
                   .grid-item.grid-sizer.col-sm-4.servicebox.other
+                    %h2
+                      #{article.title}
                     .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
                     .servicebox-inner
                       %p
-                        #{article.title}
-                        %br/
                         %i.fa.fa-fw.fa-calendar 
                         #{article.created_at.strftime("%d %b %Y")}
 
@@ -73,12 +74,12 @@
 
                 - if(article.category == "cricket")
                   .grid-item.grid-sizer.col-sm-4.servicebox.cricket
+                    %h2
+                      #{article.title}
                     .servicebox-image
                       %img.img-responsive{:alt => "#{article.title}", :src => "#{article.image_url}"}
                     .servicebox-inner
                       %p
-                        #{article.title}
-                        %br/
                         %i.fa.fa-fw.fa-calendar 
                         #{article.created_at.strftime("%d %b %Y")}
                         %br/

@@ -2,7 +2,7 @@
   .container
     .row
 .container
-  %h1 New Lifestyle Article
+  %h1 New Sports Article
   = form_for @lifestyle, html: { class: "form-horizontal"} do |f|
     = render 'shared/errors', object: @lifestyle
     .form-group
@@ -10,10 +10,16 @@
       .col-sm-10
         = f.text_field :title, class: 'form-control', required: true
     .form-group
+      = f.label :link, :class => "control-label col-sm-2"
+      .col-sm-10
+        = f.text_field :link, class: 'form-control'
+        %span.help-block A link to article.
+    .form-group
       = f.label :image, :class => "control-label col-sm-2"
       .col-sm-10
         = f.file_field :image, required: true
-        %span.help-block A link to article.
+        %span.help-block Article Image.
+ 
     .form-group
       = f.label :category, :class => "control-label col-sm-2"
       .col-sm-10
@@ -27,10 +33,12 @@
         %span#word_left 20
         %span.help-block Article Introduction NB maximum of 20 words.
     .form-group
-      = f.label :link, :class => "control-label col-sm-2"
+      = f.label :body, :class => "control-label col-sm-2"
       .col-sm-10
-        = f.text_field :link, class: 'form-control', required: true
-        %span.help-block A link to article.
+        = f.text_area :body, class: 'form-control', required: true
+        Total word count: 
+        %span#display_count 0 words
+        %span.help-block Article Introduction NB maximum of 20 words.
     .form-group
       .col-sm-offset-2.col-sm-10
         = f.submit class: 'btn btn-primary'

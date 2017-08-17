@@ -44,10 +44,11 @@
             .grid
               -for feature in @features
                 .grid-item.grid-sizer.col-sm-4.servicebox 
+                  .h2.servicebox-inner
+                    #{feature.heading}
+
                   .servicebox-image
                     %img.img-responsive{:alt => "#{feature.heading}", :src => "#{feature.image_url}"}
-                  .servicebox-inner
-                    #{feature.heading}
                   .servicebox-inner
                     %p 
                       %i.fa.fa-fw.fa-calendar 
