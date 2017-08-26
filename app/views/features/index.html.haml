@@ -7,7 +7,7 @@
     / banner
     .row
       .col-sm-12.banner
-        %img.img-responsive{:alt => "image", :src => "http://www.redvillage.co.za/uploads/main_banner/image/21/RCV_7STARS_scampD.jpg"}
+        /%img.img-responsive{:alt => "image", :src => "/images/banners/expansion.jpg"}
     / banner end
 
     /news tabs
@@ -44,17 +44,17 @@
             .grid
               -for feature in @features
                 .grid-item.grid-sizer.col-sm-4.servicebox 
-                  .h2.servicebox-inner
-                    #{feature.heading}
 
                   .servicebox-image
                     %img.img-responsive{:alt => "#{feature.heading}", :src => "#{feature.image_url}"}
+                  .h5.servicebox-inner
+                    #{feature.heading}
                   .servicebox-inner
                     %p 
                       %i.fa.fa-fw.fa-calendar 
                       #{feature.created_at.strftime("%d %b %Y")}
                       %br/
-                      %a{:href => "#{feature.link}", :target => "_blank"} #{feature.intro} 
+                      %a{:href => "/features/#{feature.id}" } #{feature.intro} 
       / Adverts
       .col-sm-3
         .side-adverts

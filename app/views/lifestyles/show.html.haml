@@ -4,31 +4,25 @@
     / banner
     .row
       .col-sm-12.banner
-        /%img.img-responsive{:alt => "image", :src => "/images/banners/expansion.jpg"}
+        %img.img-responsive{:alt => "image", :src => "http://www.redvillage.co.za/uploads/main_banner/image/21/RCV_7STARS_scampD.jpg"}
     / banner end
 
     /news tabs
     .row
       .col-sm-8
         .row         
-          .grid-item.grid-sizer.col-sm-12.servicebox 
-            .h2.wow.fadeInUp.animated
-              #{@feature.heading}
-            .servicebox-image.col-sm-8
-              %img.img-responsive{:alt => "#{@feature.heading}", :src => "#{@feature.image_url}"}
-              .servicebox-image.col-sm-12
-                this is the image caption
+          .grid-item.grid-sizer.col-sm-8.servicebox 
+            .h2.servicebox-inner
+              #{@lifestyle.title}
+            .servicebox-image
+              %img.img-responsive{:alt => "#{@lifestyle.heading}", :src => "#{@lifestyle.image_url}"}
             .servicebox-inner
               %p 
                 %i.fa.fa-fw.fa-calendar 
-
-                #{@feature.created_at.strftime("%d %b %Y")}
-              %br/
-              %p #{@feature.intro}
-              %br
-              %p #{@feature.body}
-
-
+                #{@lifestyle.created_at.strftime("%d %b %Y")}
+                %br/
+                %p #{@lifestyle.intro}
+                %p #{@lifestyle.body}
 
           / Go to www.addthis.com/dashboard to customize your tools
           .addthis_sharing_toolbox

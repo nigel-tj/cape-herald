@@ -28,7 +28,7 @@ class LifestylesController < ApplicationController
   private
 
   def lifestyle_params
-    params.require(:lifestyle).permit(:link,:image,:intro,:title,:category, :body)
+    params.require(:lifestyle).permit(:link,:image,:intro,:title,:category, :body, :track, :video)
   end
 
 end
