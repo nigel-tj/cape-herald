@@ -1,6 +1,6 @@
 %link{:href => "/css/ticker.css", :rel => "stylesheet"}/
 %script{:src => "/scripts/masonry.pkgd.min.js", :type => "text/javascript"}
-%script{:src => "/scripts/isotope.pkgd.min.js", :type => "text/javascript"}g
+%script{:src => "/scripts/isotope.pkgd.min.js", :type => "text/javascript"}
 .container
   / start news tabs
   #gallery
@@ -44,17 +44,17 @@
             .grid
               -for feature in @features
                 .grid-item.grid-sizer.col-sm-4.servicebox 
-
-                  .servicebox-image
-                    %img.img-responsive{:alt => "#{feature.heading}", :src => "#{feature.image_url}"}
-                  .h5.servicebox-inner
-                    #{feature.heading}
-                  .servicebox-inner
-                    %p 
-                      %i.fa.fa-fw.fa-calendar 
-                      #{feature.created_at.strftime("%d %b %Y")}
-                      %br/
-                      %a{:href => "/features/#{feature.id}" } #{feature.intro} 
+                  %a{:href => "/features/#{feature.id}" }
+                    .servicebox-image
+                      %img.img-responsive{:alt => "#{feature.heading}", :src => "#{feature.image_url}"}
+                    .h5.servicebox-inner
+                      #{feature.heading}
+                    .servicebox-inner
+                      %p 
+                        %i.fa.fa-fw.fa-calendar 
+                        #{feature.created_at.strftime("%d %b %Y")}
+                        
+                        %a{:href => "/features/#{feature.id}" } #{feature.intro} 
       / Adverts
       .col-sm-3
         .side-adverts
