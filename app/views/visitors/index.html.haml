@@ -1,7 +1,7 @@
 %link{:href => "/css/thumbnail-slider.css", :rel => "stylesheet"}/
-
+%link{:href => "/css/ticker.css", :rel => "stylesheet"}/
 .container
-  .row.club-profiles.col-md-9
+  .row.club-profiles.col-md-8
     / start banner
     #slider.flexslider
       %ul.slides      
@@ -15,30 +15,96 @@
                 %a{:href => "#"} More here
     / end banner
 
-  /news tabs
-  .col-md-3
-    .col-md-12
-      .ticker-container
-        .ticker-caption
-          %p News
-        %ul
-          %div
-            %li
-              %span.breaking_news
-                Breaking News 1 –
-                %a{:href => "#"} read more
-          %div
-            %li
-              %span.breaking_news
-                Breaking News 2 –
-                %a{:href => "#"} read more
-
+  /trending local news 
+  #gallery
+    .row
+      .col-md-4{ :style => "padding: 0" }
+        .ticker-container{ :style => "text-align: center; overflow: visible;" }
+          .ticker-caption-visitors
+            %p Top Headlines
+          %div.col-md-12
+            %ul{ :style => "margin: 0; font-size: 18px; text-align: left;" }            
+              %li
+                %span.breaking_news
+                  Breaking News 1 –
+                  %a{:href => "#"} read more
 
   / start trending
   .row.module.parallax.parallax-profiles.text-center
     .col-md-12
       .club-heading
         %h1.wow.fadeInUp{"data-wow-duration" => "1s"} TRENDING
+
+        /news tabs
+        .row{ :style => "font-size: 25px;" }
+          .col-md-3
+            .ticker-container
+              .ticker-caption-visitors
+                %p Local
+
+            .col-md-12
+              #local_carousel.flexslider
+                %ul.slides
+                  -for article in @features
+                    %li
+                      .vid-item
+                        .thumb
+                          %a{:href => "#"}
+                            %img{:src => "/images/sample-small.png"}
+                        .desc
+                          %span story headline
+
+          .col-md-3
+            .ticker-container
+              .ticker-caption-visitors
+                %p Internattional
+
+            .col-md-12
+              #local_carousel.flexslider
+                %ul.slides
+                  -for article in @features
+                    %li
+                      .vid-item
+                        .thumb
+                          %a{:href => "#"}
+                            %img{:src => "/images/sample-small.png"}
+                        .desc
+                          %span story headline
+
+          .col-md-3
+            .ticker-container
+              .ticker-caption-visitors
+                %p Sports
+
+            .col-md-12
+              #local_carousel.flexslider
+                %ul.slides
+                  -for article in @features
+                    %li
+                      .vid-item
+                        .thumb
+                          %a{:href => "#"}
+                            %img{:src => "/images/sample-small.png"}
+                        .desc
+                          %span story headline
+
+          .col-md-3
+            .ticker-container
+              .ticker-caption-visitors
+                %p Entertainment
+
+            .col-md-12
+              #local_carousel.flexslider
+                %ul.slides
+                  -for article in @features
+                    %li
+                      .vid-item
+                        .thumb
+                          %a{:href => "#"}
+                            %img{:src => "/images/sample-small.png"}
+                        .desc
+                          %span story headline
+
 
   .row.module.parallax.parallax-profiles.text-center
     .col-md-12
@@ -103,17 +169,154 @@
   .row.module.parallax.parallax-profiles.text-center
     .col-md-12
       %h1.wow.fadeInUp{"data-wow-duration" => "1s"} OPINION & ANALYSIS
-    .row
+
+      /news tabs
+      .row{ :style => "font-size: 25px;" }
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
 
   .row.module.parallax.parallax-profiles.text-center
     .col-md-12
       %h1.wow.fadeInUp{"data-wow-duration" => "1s"} WEIRD / MISC NEWS
-    .row
+
+      /news tabs
+      .row{ :style => "font-size: 25px;" }
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
 
   .row.module.parallax.parallax-profiles.text-center
     .col-md-12
       %h1.wow.fadeInUp{"data-wow-duration" => "1s"} BUSINESS
-    .row
+
+      /news tabs
+      .row{ :style => "font-size: 25px;" }
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
+        .col-md-3
+          .col-md-12
+            #local_carousel.flexslider
+              .vid-item
+                .thumb
+                  %a{:href => "#"}
+                    %img{:src => "/images/sample-small.png"}
+                .desc
+                  %span story headline
+
+
 
 	    
   <!--   / start hot box -->
@@ -184,7 +387,7 @@
 <!-- %link{:href => "/css/experiment-styles.css", :rel => "stylesheet"}/ -->
 <!-- %link{:href => "/css/touch.css", :rel => "stylesheet"}/ -->
 <!-- %script{:src => "/js/touch.js"} -->
-
+%script{:src => "/scripts/ticker.js", :type => "text/javascript"}
 
 :javascript
   $(document).ready(function(){
@@ -206,12 +409,12 @@
       asNavFor: '#slider'
     });
 
-    $('#trends_carousel').flexslider({
+    $('#local_carousel').flexslider({
       animation: "slide",
       controlNav: false,
-      animationLoop: false,
+      animationLoop: true,
       slideshow: false,
-      itemWidth: 400,
+      itemWidth: 200,
       itemMargin: 5,
       asNavFor: '#slider'
     });
