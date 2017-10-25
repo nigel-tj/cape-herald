@@ -64,4 +64,4 @@ gem 'active_type', '0.3.1'
 gem 'carrierwave'
 gem "rmagick"
 gem 'kaminari'
-gem 'sqlite3'
+
