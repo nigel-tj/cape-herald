@@ -53,6 +53,7 @@ group :test do
 end
 group :production do
   gem 'rails_12factor'
+  gem 'pg', '0.18.1'
 end
 
 gem 'yt', '~> 0.13.7'

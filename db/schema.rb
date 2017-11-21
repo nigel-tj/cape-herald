@@ -101,8 +101,18 @@ ActiveRecord::Schema.define(version: 20170826001214) do
     t.datetime "updated_at",  null: false
   end
 
-# Could not dump table "features" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "features", force: :cascade do |t|
+    t.text     "link"
+    t.text     "image"
+    t.text     "intro"
+    t.text     "thumb"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "heading"
+    t.text     "body"
+    t.string   "video"
+    t.string   "track"
+  end
 
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
