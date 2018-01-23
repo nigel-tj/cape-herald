@@ -99,7 +99,7 @@ Rails.application.routes.draw do
   match '/admin_artist_index' => 'artists#admin_artist_index', :via => :get
   match '/new_album_upload' => 'albums#new', :via => :get
   match '/lifestyle_admin_index' => 'lifestyles#lifestyle_admin_index', :via => :get
-  match '/admins' => 'galleries#new', :via => :get
+  match '/admins' => 'admins#index', :via => :get
   match '/admin_all_events' => 'events#admin_all_events', :via => :get
   match '/admin_show_album/:id' => 'albums#admin_show_album', :via => :get
   match '/mall' => 'spree/home#index', :via => :get
