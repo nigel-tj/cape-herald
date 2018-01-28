@@ -11,14 +11,6 @@ class ApplicationController < ActionController::Base
   end
   
   protected
-  #def after_sign_in_path_for(resource)
-  #  if current_user.admin?
-  #    admins_index_path
-  #  else
-  #    visitors_index_path
-  #  end
-    
-  #end
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])

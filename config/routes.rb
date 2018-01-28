@@ -40,7 +40,6 @@ Rails.application.routes.draw do
   
 
   resources :feature_banners
-  devise_for :admin_users
   devise_for :users
   devise_for :admins
   resources :lifestyles
