@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826001214) do
+ActiveRecord::Schema.define(version: 20180128163939) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -106,13 +106,16 @@ ActiveRecord::Schema.define(version: 20170826001214) do
     t.text     "image"
     t.text     "intro"
     t.text     "thumb"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "heading"
     t.text     "body"
     t.string   "video"
     t.string   "track"
+    t.integer  "news_category_id"
   end
+
+  add_index "features", ["news_category_id"], name: "index_features_on_news_category_id"
 
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
@@ -178,6 +181,12 @@ ActiveRecord::Schema.define(version: 20170826001214) do
     t.boolean  "active"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "news_categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "standard_tickets", force: :cascade do |t|
