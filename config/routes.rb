@@ -54,6 +54,8 @@ Rails.application.routes.draw do
   resources :videos
   resources :artists
   resources :events
+  resources :international_features
+  resources :local_features
   #resources :vip_tickets
   #resources :standard_tickets
   
@@ -71,7 +73,10 @@ Rails.application.routes.draw do
   match '/artist' => 'artists#show', :via => :get
   match '/store' => 'visitors#store', :via => :get
   match '/new_artist_upload' => 'artists#new', :via => :get
-  match '/new_feature_upload' => 'features#new', :via => :get
+  #match '/new_feature_upload' => 'features#new', :via => :get
+  match '/new_local_feature_upload' => 'local_features#new', :via => :get
+  match '/new_international_feature_upload' => 'international_features#new', :via => :get
+  match '/international_features_index' => 'international_features#admin_index', :via => :get
   match '/downloads' => 'artists#downloads', :via => :get
   match '/new_music_upload' => 'tracks#new', :via => :get
   match '/new_gallery_upload' => 'galleries#new', :via => :get

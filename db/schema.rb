@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180128163939) do
+ActiveRecord::Schema.define(version: 20180209150815) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -143,6 +143,20 @@ ActiveRecord::Schema.define(version: 20180128163939) do
     t.string   "image"
   end
 
+  create_table "international_features", force: :cascade do |t|
+    t.text     "link"
+    t.text     "main_image"
+    t.text     "intro"
+    t.text     "thumb"
+    t.string   "heading"
+    t.text     "body"
+    t.string   "video"
+    t.string   "track"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
+  end
+
   create_table "lifestyle_banners", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -164,6 +178,20 @@ ActiveRecord::Schema.define(version: 20180128163939) do
     t.text     "body"
     t.string   "video"
     t.string   "track"
+  end
+
+  create_table "local_features", force: :cascade do |t|
+    t.text     "link"
+    t.text     "main_image"
+    t.text     "intro"
+    t.text     "thumb"
+    t.string   "heading"
+    t.text     "body"
+    t.string   "video"
+    t.string   "track"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
   end
 
   create_table "main_banners", force: :cascade do |t|
