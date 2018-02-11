@@ -75,6 +75,7 @@ Rails.application.routes.draw do
   match '/new_artist_upload' => 'artists#new', :via => :get
   #match '/new_feature_upload' => 'features#new', :via => :get
   match '/new_local_feature_upload' => 'local_features#new', :via => :get
+  match '/local_features_index' => 'local_features#admin_index', :via => :get
   match '/new_international_feature_upload' => 'international_features#new', :via => :get
   match '/international_features_index' => 'international_features#admin_index', :via => :get
   match '/downloads' => 'artists#downloads', :via => :get

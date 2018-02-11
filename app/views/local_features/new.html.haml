@@ -4,8 +4,7 @@
 .container
   %h1 New #{ params[:category]} feture
   = form_for @local_feature, html: { class: "form-horizontal"} do |f|
-    = render 'shared/errors', object: @feature 
-    = f.hidden_field :category, value: "#{ params[:category]}"
+    = render 'shared/errors', object: @local_feature 
     .form-group
       = f.label :heading, :class => "control-label col-sm-2"
       .col-sm-10

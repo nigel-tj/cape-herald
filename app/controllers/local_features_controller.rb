@@ -15,10 +15,10 @@ class LocalFeaturesController < ApplicationController
   end
   
   def create
-    @feature = LocalFeature.new(local_feature_params)
+    @feature = LocalFeature.new(feature_params)
     if @feature.save
       flash[:notice] = "Successfully created gallery."
-      redirect_to "/admin_index"
+      redirect_to "/local_features_index"
     else
       render :action => 'new'
     end
