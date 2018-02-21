@@ -18,7 +18,7 @@ class InternationalFeaturesController < ApplicationController
     @international_feature = InternationalFeature.new(feature_params)
     if @international_feature.save
       flash[:notice] = "Successfully created gallery."
-      redirect_to "/international_features#admin_index"
+      redirect_to "/international_features_index"
     else
       render :action => 'new'
     end
