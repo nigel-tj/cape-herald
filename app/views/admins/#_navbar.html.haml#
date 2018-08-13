@@ -35,7 +35,7 @@
             %span.caret
               %ul.dropdown-menu
                 %li
-                  %a{:href => "/new_international_feature_upload?category=sports"} New article
+                  %a{:href => "/new_international_feature_upload?category="} New article
                 %li
                   %a{:href => "/admin_index"} All articles
 
