@@ -886,7 +886,7 @@ div.module.parallax-events {
     width: 100% !important;
 }
 div.module.parallax-profiles {
-	background-image:url("../images/profile-bg.jpg");
+    background-color: rgba(0,0,0,0.9);
 }
 .club-profiles{
     margin-bottom:20px;
@@ -1286,7 +1286,7 @@ div.module.parallax-reservation {
 }
 
 div.module.parallax-footer {
-	background-image:url("../images/footer-bg.jpg");
+	background-color:rgba(0,0,0,0.9);
 	padding-top: 5%;
 	padding-bottom: 3%;
 }

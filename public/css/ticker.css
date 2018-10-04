@@ -68,19 +68,19 @@
 	.ticker-container .ticker-caption {
 		height: 100%;
 		width: 150px;
-		background: url('/images/ticker-caption-bg.png');
+		background: url('/images/ticker-blue.png');
 	}
 	.ticker-container .ticker-caption-visitors {
 		height: 100%;
 		width: 100%;
 		font-size: 30px;
 		text-align: center;
-		background: url('/images/ticker-caption-bg.png');
+		background: url('/images/ticker-blue.png');
 	}
 	.ticker-container .ticker-caption-visitors {
 		height: 100%;
 		width: 100%;
-		background: url('/images/ticker-caption-bg.png');
+		background: url('/images/ticker-blue.png');
 	}
 
 	.ticker-container .ticker-caption p {
